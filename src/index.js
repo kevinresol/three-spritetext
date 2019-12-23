@@ -16,7 +16,7 @@ const three = window.THREE
 
 export default class extends three.Sprite {
   constructor(text = '', textHeight = 10, color = 'rgba(255, 255, 255, 1)') {
-    super(new three.SpriteMaterial({ map: new three.Texture() }));
+    super(new three.SpriteMaterial({ map: new three.Texture(), depthWrite: false }));
 
     this._text = text;
     this._textHeight = textHeight;
